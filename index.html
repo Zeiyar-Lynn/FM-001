@@ -2,36 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root{
+      --pale-blue: hsl(225, 100%, 94%);
+      --bright-blue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+    }
+
+    body{ 
+      background: blueviolet url(images/pattern-background-desktop.svg) no-repeat;
+      background-size: contain;
+      font-family: 'red hat display', sans-serif;
+      height: 100vh;
+      font-size: 1rem;
+    }
+
+    .flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .box{
+      background-color: #fff;
+      width: 450px;
+      padding: 40px 50px;
+    }
+
+    .box > *{
+      text-align: center;
+    }
+
+
+
+    h1, h4{
+      color: var(--dark-blue);
+      font-weight: 900;
+    }
+
+    p, .btn > a{
+      color: var(--desaturated-blue);
+    }
+
+    a{
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .main{
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .main > img{
+      display: block;
+    }
+
+    /* box */
+    .box h1, .box > p{
+      margin-bottom: 20px;
+    }
+
+    /* plan */
+    .plan{
+      width: 100%;
+      flex-direction: row;
+    }
+
+    .plan{
+      background-color: var(--very-pale-blue);
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+
+    .plan .spec{
+      margin-right: auto;
+      margin-left: 15px;
+    }
+
+    .plan a{
+      text-decoration: underline;
+    }
+
+    /* button */
+    .btn-1{
+        background: var(--bright-blue);
+        padding: 15px 95px;
+        border-radius: 10px;
+        margin: 25px 0;
+    }
+
+    .btn-1 a{
+      color: #fff;
+      font-weight: 700;
+    }
   </style>
+
+
 </head>
-<body>
 
-  Order Summary
+<body class="flex">
+  <div class="main">
+    <img src="images/illustration-hero.svg" alt="">
+    <div class="box flex">
+      <h1>Order Summary</h1>
+      <p>You can now listen to million of songs, audiobooks, and podcasts on any device anywhere you like!</p>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      <div class="plan flex">
+        <img src="images/icon-music.svg" alt="">
+        <div class="spec">
+          <h4>Annual Plan</h4>
+          <p>$59.99/year</p>
+        </div>
+        <a href="">Change</a>
+      </div>
 
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="btn">
+        <div class="btn-1">
+          <a href="">Proceed to Payment</a>
+        </div>
+        <a href="">Cancel Order</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
