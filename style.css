@@ -29,7 +29,7 @@
   }
 
   /* fundamental */
-  h1, h4{
+  h1, h2{
     color: var(--dark-blue);
     font-weight: 900;
   }
@@ -38,19 +38,23 @@
     font-size: 28px;
   }
 
+  h2{
+    font-size: 18px;
+  }
+
   a{
     text-decoration: none;
     font-weight: 700;
   }
 
   /* Main */
-  .main{
+  main{
     border-radius: 20px;
     overflow: hidden;
     width: 450px;
   }
 
-  .main > img{
+  main > img{
     display: block;
     width: 100%;
   }
@@ -87,7 +91,7 @@
     margin-left: 25px;
   }
 
-  .plan .spec h4{
+  .plan .spec h2{
     margin-bottom: 5px;
   }
 
@@ -128,7 +132,7 @@
   
   /* Mobile */
   @media (max-width: 376px){
-    .main{
+    main{
       width: 325px;
       margin-left: auto;
       margin-right: auto;
