@@ -15,6 +15,7 @@
       box-sizing: border-box;
     }
 
+    /* Utilities */
     :root{
       --pale-blue: hsl(225, 100%, 94%);
       --bright-blue: hsl(245, 75%, 52%);
@@ -24,7 +25,7 @@
     }
 
     body{ 
-      background: blueviolet url(images/pattern-background-desktop.svg) no-repeat;
+      background: var(--pale-blue) url(images/pattern-background-desktop.svg) no-repeat;
       background-size: contain;
       font-family: 'red hat display', sans-serif;
       height: 100vh;
@@ -38,25 +39,14 @@
       flex-direction: column;
     }
 
-    .box{
-      background-color: #fff;
-      width: 450px;
-      padding: 40px 50px;
-    }
-
-    .box > *{
-      text-align: center;
-    }
-
-
-
+    /* fundamental */
     h1, h4{
       color: var(--dark-blue);
       font-weight: 900;
     }
 
-    p, .btn > a{
-      color: var(--desaturated-blue);
+    h1{
+      font-size: 28px;
     }
 
     a{
@@ -64,18 +54,35 @@
       font-weight: 700;
     }
 
+    /* Main */
     .main{
       border-radius: 20px;
       overflow: hidden;
+      width: 450px;
     }
 
     .main > img{
       display: block;
+      width: 100%;
     }
 
     /* box */
+    .box{
+      background-color: #fff;
+  
+      padding: 50px 25px;
+    }
+
+    .box > *{
+      text-align: center;
+    }
+
     .box h1, .box > p{
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+    }
+
+    .box > p{
+      line-height: 25px;
     }
 
     /* plan */
@@ -86,30 +93,88 @@
 
     .plan{
       background-color: var(--very-pale-blue);
-      padding: 10px 25px;
+      padding: 25px 25px;
       border-radius: 10px;
     }
 
     .plan .spec{
       margin-right: auto;
-      margin-left: 15px;
+      margin-left: 20px;
+    }
+
+    .plan .spec h4{
+      margin-bottom: 5px;
     }
 
     .plan a{
       text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .plan a:hover{
+      color: var(--dark-blue);
     }
 
     /* button */
     .btn-1{
-        background: var(--bright-blue);
-        padding: 15px 95px;
-        border-radius: 10px;
-        margin: 25px 0;
+      background: var(--bright-blue);
+      padding: 15px 95px;
+      border-radius: 10px;
+      margin: 25px 0;
+      box-shadow: 0 15px 10px var(--pale-blue);
     }
 
     .btn-1 a{
       color: #fff;
       font-weight: 700;
+    }
+
+    .btn-1:hover{
+      background-color: hsla(245, 75%, 52%, .93);
+    }
+
+    p, .btn > a{
+      color: var(--desaturated-blue);
+    }
+
+    .btn  > a:hover{
+      color: var(--dark-blue);
+    }
+
+    /* Mobile */
+    @media (max-width: 376px){
+      .main{
+        width: 325px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h1{
+        font-size: 26px;
+      }
+
+      .box p{
+        padding: 0 20px;
+      }
+      p{
+        font-size: 14px;
+      }
+
+      .btn-1{
+        padding: 13px 55px;
+      }
+
+      .plan, .btn{
+        font-size: 13px;
+      }
+
+      .plan {
+        padding: 15px 20px;
+      }
+
+      .plan .spec h4{
+        font-weight: 900;
+      }
     }
   </style>
 
